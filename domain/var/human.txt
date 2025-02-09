@@ -1,5 +1,0 @@
-User-agent: *
-Allow: *sda
-Allow: /.well-known/ada
-Disallow: /*.plasdadasda
-Disallow: /*.human

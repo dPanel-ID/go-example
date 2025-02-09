@@ -1,30 +1,17 @@
 package main
 
 import (
-	"encoding/json"
-	"log"
 	"net/http"
 )
 
-type person struct {
-	Name string `json:"name"`
-	Age  int    `json:"age"`
-}
-
 func httpHandler(w http.ResponseWriter, r *http.Request) {
-	var user *person = &person{
-		Name: "Nedya Amrih Prakasa",
-		Age:  30,
-	}
 
-	w.Header().Set("content-type", "application/json")
-	j, _ := json.Marshal(user)
-	w.Write(j)
+	w.Header().Set("content-type", "text/html")
+	w.Write([]byte("Hello world"))
 }
 
 func main() {
 	http.HandleFunc("/", httpHandler)
 
-	log.Println("Go!")
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":9000", nil)
 }

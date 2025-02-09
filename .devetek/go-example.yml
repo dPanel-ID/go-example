@@ -1,4 +1,3 @@
-# Cloud Devetek Standard Definition v0.0.1-alpha.0 Go Example
 version: v0.0.1-alpha.0
 
 setup:
@@ -8,27 +7,17 @@ setup:
 
 build:
   target:
-    ## -> Build app non docker (tar.gz)
     machine: # exec sequentially
       workdir: .
       steps:
-        - name: "build application real from new commit"
+        - name: "Build Golang Application"
           command:
             - make build-dpanel
-        # this step will disable temporary, preparing cheap bucket or storage alternative
-        # or maybe waiting for angel investor
-        - name: "archive file to tarball"
+        - name: "Archive Go App to Tarball"
           archive:
-            - ./domain
             - ./go-example
 
 run:
-  name: golang-example-app
-  description: My first go example for cloud.terpusat.com
+  name: go-example
+  description: Simulate dPanel golang deployment (cloud.terpusat.com)
   command: ./go-example
-  # set environment runtime from cloud.terpusat.com
-  # environment:
-  #   - key: ENVIRONMENT
-  #     value: ${ENVIRONMENT}
-  #   - key: HOST
-  #     value: ${HOST}

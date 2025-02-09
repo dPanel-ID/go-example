@@ -1,4 +1,0 @@
-User-agent: *
-Allow: asudhasdsa
-Allow: /.well-known/
-Disallow: /*.pladas
