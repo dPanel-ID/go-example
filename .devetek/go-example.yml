@@ -12,7 +12,7 @@ build:
       steps:
         - name: "Build Golang Application"
           command:
-            - make build-dpanel
+            - make build
         - name: "Archive Go App to Tarball"
           archive:
             - ./go-example
@@ -21,3 +21,4 @@ run:
   name: go-example
   description: Simulate dPanel golang deployment (cloud.terpusat.com)
   command: ./go-example
+  port: 9000
