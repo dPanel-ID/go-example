@@ -12,16 +12,16 @@ build:
       steps:
         - name: "Build Golang Application"
           command:
-            - make build
+            - go build -o go-example main.go
         - name: "Archive Go App to Tarball"
           archive:
             - ./go-example
 
 run:
-  name: go-example
-  description: Simulate dPanel golang deployment (cloud.terpusat.com)
+  name: go-example-v2
+  description: Simulate dPanel golang deployment v2 (cloud.terpusat.com)
   command: ./go-example
-  port: 9000
+  port: 9001
   environment:
     - key: PORT
-      value: 9000
+      value: 9001
