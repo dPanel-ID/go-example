@@ -23,5 +23,5 @@ run:
   command: ./go-example
   port: 9000
   environment:
-    - name: PORT
+    - key: PORT
       value: 9000
