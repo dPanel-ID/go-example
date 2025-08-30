@@ -22,6 +22,3 @@ run:
   description: Simulate dPanel golang deployment (cloud.terpusat.com)
   command: ./go-example
   port: 9000
-  environment:
-    - key: PORT
-      value: 9000
