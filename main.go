@@ -9,7 +9,7 @@ import (
 func httpHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("content-type", "text/html")
-	w.Write([]byte("Hello world"))
+	w.Write([]byte("Hello world fro Auto Deployment!"))
 }
 
 func main() {
