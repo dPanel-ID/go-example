@@ -9,11 +9,15 @@ import (
 func httpHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("content-type", "text/html")
-	w.Write([]byte("Hello world fro Auto Deployment!"))
+	w.Write([]byte("Hello world from golang example deploy with dPanel!"))
 }
 
 func main() {
 	var port = os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
+
 	http.HandleFunc("/", httpHandler)
 
 	log.Println("Server started on :" + port)
