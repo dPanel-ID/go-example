@@ -9,7 +9,7 @@ import (
 func httpHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("content-type", "text/html")
-	w.Write([]byte("Hello world from golang example deploy with dPanel!"))
+	w.Write([]byte("Hello world v2, deploy from dPanel!"))
 }
 
 func main() {
