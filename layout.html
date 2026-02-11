@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>dPanel - Go Example</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black; /* Sets a 1-pixel solid black border */
+        width: 500px; /* Makes the table take up the full width of its container */
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse; /* Merges adjacent borders into a single line */
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th style="width: 2000px">Hostname</th>
+        <th>OS</th>
+        <th>Architecture</th>
+        <th>CPUs</th>
+        <th>Go Version</th>
+      </tr>
+      <tr>
+        <td style="width: 2000px">{{.Hostname}}</td>
+        <td>{{.OS}}</td>
+        <td>{{.Architecture}}</td>
+        <td>{{.CPUs}}</td>
+        <td>{{.GoVersion}}</td>
+      </tr>
+    </table>
+  </body>
+</html>
