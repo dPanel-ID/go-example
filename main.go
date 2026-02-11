@@ -9,7 +9,7 @@ import (
 func httpHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("content-type", "text/html")
-	w.Write([]byte("Hello world v2, deploy from dPanel!"))
+	w.Write([]byte("Halo dunia, aplikasi ini ada di Raspberry Pi HomeLab tanpa dedicated IP public!"))
 }
 
 func main() {
