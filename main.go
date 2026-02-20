@@ -19,7 +19,7 @@ type osData struct {
 func httpHandler(w http.ResponseWriter, r *http.Request) {
 	hostname, err := os.Hostname()
 	if err != nil {
-		hostname = "Unknown"
+		hostname = "-"
 	}
 
 	var data = osData{
