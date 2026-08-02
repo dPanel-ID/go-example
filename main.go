@@ -17,6 +17,7 @@ type osData struct {
 }
 
 func httpHandler(w http.ResponseWriter, r *http.Request) {
+	log.Println("Received request from:", r.RemoteAddr)
 	hostname, err := os.Hostname()
 	if err != nil {
 		hostname = "unknown"
